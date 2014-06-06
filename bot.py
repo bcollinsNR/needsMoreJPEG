@@ -5,12 +5,11 @@ import os
 # user_agent = ("needsMoreJPEGBot/0.1 by bc")
 
 picture = Image.open("test.jpg")
-newPic = picture.save("/Users/bcollins/Desktop/reddit/Imgur/test_compressed.jpg", quality=1)
+newPic = picture.save("/Users/bcollins/Desktop/needsMoreJPEG/Imgur/test_compressed.jpg", quality=1)
 
 # https://github.com/jacobgreenleaf/imgur-python/
 # save url in text file
 
-# works, but very clunky
 os.system("cd Imgur && python main.py upload test_compressed.jpg > ../url.txt")
 url = open('url.txt', 'r').readline()
 print url
