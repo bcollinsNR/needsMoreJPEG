@@ -2,15 +2,15 @@ import praw
 from PIL import Image
 import os
 
-picture = Image.open("test.jpg")
-newPic = picture.save("/Users/bcollins/Desktop/test_compressed.jpg", quality=1)
+#picture = Image.open("test.jpg")
+#newPic = picture.save("/Users/bcollins/Desktop/test_compressed.jpg", quality=1)
 
 # https://github.com/jacobgreenleaf/imgur-python/
 # save url in text file
 
-os.system("cd Imgur && python main.py upload ../../test_compressed.jpg > ../url.txt")
-url = open('url.txt', 'r').readline()
-print url
+#os.system("cd Imgur && python main.py upload ../../test_compressed.jpg > ../url.txt")
+#url = open('url.txt', 'r').readline()
+#print url
 
 # todo: reddit API bot functionality
 
@@ -26,6 +26,10 @@ r = praw.Reddit('needsMoreJPEGBot/0.1 by bcollinsNR'
                 'Url: https://github.com/bcollinsNR/needsMoreJPEG')
 r.login('needMoarJPEG','0111000001100001011100110111001101110111011011110111001001100100')
 #already_done = []
+
+print(dir(r.get_redditor("needMoarJPEG")))
+
+
 
 #prawWords = ['needs', 'more', 'jpeg']
 #while True:
